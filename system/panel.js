@@ -17,7 +17,7 @@ module.exports = (client) => {
       const messages = await channel.messages.fetch({ limit: 20 });
 
       const oldPanels = messages.filter(
-        msg =>
+        (msg) =>
           msg.author.id === client.user.id &&
           msg.embeds.length > 0 &&
           msg.embeds[0].title === "📋 KONTROLLPANEL"
@@ -29,6 +29,10 @@ module.exports = (client) => {
 
       const embed = new EmbedBuilder()
         .setColor("#F8C8DC")
+        .setAuthor({
+          name: "🌸 Nimika's Cozy Community",
+          iconURL: client.guilds.cache.first()?.iconURL()
+        })
         .setTitle("📋 KONTROLLPANEL")
         .setDescription(
           "Wähle eine Aktion über die Schaltfläche unten."
