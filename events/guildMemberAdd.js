@@ -7,7 +7,7 @@ process.env.WELCOME_CHANNEL_ID
 ```
 if (!channel) return;
 
-channel.send({
+await channel.send({
   content: `# 🌸 Willkommen auf meinem Server! ❤️
 ```
 
