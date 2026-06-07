@@ -1,6 +1,6 @@
 const { EmbedBuilder } = require("discord.js");
 
-const LOG_CHANNEL_ID = "1513124411178356786";
+const LOG_CHANNEL_ID = "1513199769961627769";
 
 module.exports = (client) => {
   client.once("ready", async () => {
