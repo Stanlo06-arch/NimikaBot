@@ -10,7 +10,7 @@ module.exports = (client) => {
     const embed = new EmbedBuilder()
       .setColor("#F8C8DC")
       .setAuthor({
-        name: "🌸 NIMIKA'S COZY COMMUNITY",
+        name: "🌸 Nimika's Cozy Community",
         iconURL: member.guild.iconURL({ dynamic: true })
       })
       .setTitle("❤️ Willkommen auf meinem Server! ❤️")
