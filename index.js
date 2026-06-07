@@ -15,6 +15,5 @@ require("./system/willkommen")(client);
 require("./system/panel")(client);
 require("./system/interactionCreate")(client);
 require("./system/serverLogs")(client);
-require("./system/panel")(client);
 
 client.login(process.env.TOKEN);
