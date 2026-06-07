@@ -49,12 +49,13 @@ module.exports = (client) => {
       })
       .setTimestamp();
 
-    await channel.send({
-      embeds: [embed],
-      allowedMentions: {
-        parse: ["everyone"]
-      }
-    });
+   await channel.send({
+  content: "@everyone",
+  embeds: [embed],
+  allowedMentions: {
+    parse: ["everyone"]
+  }
+});
 
     console.log("🔴 TikTok Live erkannt");
   });
