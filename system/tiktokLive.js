@@ -2,7 +2,7 @@ const { WebcastPushConnection } = require("tiktok-live-connector");
 const { EmbedBuilder } = require("discord.js");
 
 const TIKTOK_USERNAME = "itsnimika";
-const LIVE_CHANNEL_ID = "1513122714720665731";
+const LIVE_CHANNEL_ID = "1513201961225294075";
 
 let liveSent = false;
 
