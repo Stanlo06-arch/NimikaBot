@@ -1,3 +1,3 @@
 module.exports = {
-welcomeChannel: "1513122108753051648"
+welcomeChannel: "1513201781889568829"
 };
