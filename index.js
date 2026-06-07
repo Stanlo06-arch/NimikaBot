@@ -12,5 +12,6 @@ console.log(`🌸 Bot online: ${client.user.tag}`);
 });
 
 require("./system/willkommen")(client);
+require("./system/panel")(client);
 
 client.login(process.env.TOKEN);
