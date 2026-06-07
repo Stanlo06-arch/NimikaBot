@@ -5,7 +5,7 @@ const {
   ButtonStyle
 } = require("discord.js");
 
-const PANEL_CHANNEL_ID = "1513124369050898513";
+const PANEL_CHANNEL_ID = "1513199686171889744";
 
 module.exports = (client) => {
   client.once("ready", async () => {
