@@ -14,5 +14,6 @@ console.log(`🌸 Bot online: ${client.user.tag}`);
 require("./system/willkommen")(client);
 require("./system/panel")(client);
 require("./system/interactionCreate")(client);
+require("./system/serverLogs")(client);
 
 client.login(process.env.TOKEN);
