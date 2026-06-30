@@ -107,7 +107,7 @@ module.exports = (client) => {
           .setTitle(data.title)
           .setDescription(data.text)
           .setImage(
-            "https://cdn.discordapp.com/attachments/1510626895627288676/1513141910791913533/NimikaBanner.png"
+            "https://cdn.discordapp.com/attachments/1510626895627288676/1521547336529219715/file_00000000d71c71f496a0ef5675ce39e3.png?ex=6a453ae2&is=6a43e962&hm=b7eed4cf1778e7a65b8c8bd7a4ab3092d6939cbf663d29285af96cafb0a7aa00&"
           )
           .setFooter({
             text: "Hostet by 𝔖𝔱𝔞𝔫𝔩𝔢𝔶_𝔯𝔪𝔭.06 ♕",
