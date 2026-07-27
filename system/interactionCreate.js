@@ -13,36 +13,58 @@ const pendingEmbeds = new Map();
 module.exports = (client) => {
   client.on("interactionCreate", async (interaction) => {
 
-    // Button
-    if (interaction.isButton()) {
-      if (interaction.customId === "embed_erstellen") {
+   // Button
+if (interaction.isButton()) {
 
-        const modal = new ModalBuilder()
-          .setCustomId("embed_modal")
-          .setTitle("📝 Einbettung erstellen");
+  // ✅ Regeln akzeptieren
+  if (interaction.customId === "accept_rules") {
 
-        const titleInput = new TextInputBuilder()
-          .setCustomId("embed_title")
-          .setLabel("Titel")
-          .setStyle(TextInputStyle.Short)
-          .setRequired(true)
-          .setMaxLength(256);
+    const { MEMBER_ROLE_ID } = require("../config/ids");
 
-        const textInput = new TextInputBuilder()
-          .setCustomId("embed_text")
-          .setLabel("Text")
-          .setStyle(TextInputStyle.Paragraph)
-          .setRequired(true)
-          .setMaxLength(2000);
-
-        modal.addComponents(
-          new ActionRowBuilder().addComponents(titleInput),
-          new ActionRowBuilder().addComponents(textInput)
-        );
-
-        return interaction.showModal(modal);
-      }
+    if (interaction.member.roles.cache.has(MEMBER_ROLE_ID)) {
+      return interaction.reply({
+        content: "✅ Du hast die Regeln bereits akzeptiert.",
+        ephemeral: true
+      });
     }
+
+    await interaction.member.roles.add(MEMBER_ROLE_ID);
+
+    return interaction.reply({
+      content: "🌸 Vielen Dank! Du bist jetzt Mitglied.",
+      ephemeral: true
+    });
+  }
+
+  // 📝 Embed erstellen
+  if (interaction.customId === "embed_erstellen") {
+
+    const modal = new ModalBuilder()
+      .setCustomId("embed_modal")
+      .setTitle("📝 Einbettung erstellen");
+
+    const titleInput = new TextInputBuilder()
+      .setCustomId("embed_title")
+      .setLabel("Titel")
+      .setStyle(TextInputStyle.Short)
+      .setRequired(true)
+      .setMaxLength(256);
+
+    const textInput = new TextInputBuilder()
+      .setCustomId("embed_text")
+      .setLabel("Text")
+      .setStyle(TextInputStyle.Paragraph)
+      .setRequired(true)
+      .setMaxLength(2000);
+
+    modal.addComponents(
+      new ActionRowBuilder().addComponents(titleInput),
+      new ActionRowBuilder().addComponents(textInput)
+    );
+
+    return interaction.showModal(modal);
+  }
+}
 
     // Modal
     if (interaction.isModalSubmit()) {
