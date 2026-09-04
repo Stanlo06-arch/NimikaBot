@@ -63,7 +63,7 @@ Dies ist ein Ort zum Abschalten, Austauschen und gemeinsamen Spielen. ✨
            .setImage("https://cdn.discordapp.com/attachments/1510626895627288676/1521547336529219715/file_00000000d71c71f496a0ef5675ce39e3.png?ex=6a68d362&is=6a6781e2&hm=4bf7aac85a56514e32fd655cf3623a9af4883f2cc10cecc5e9df6f1d8e02d7e7")
 
             .setFooter({
-                text: "Hostet by Stanley_rmp.06 ♕",
+                text: "Hostet by 𝐈𝐭𝐬𝐅𝐥𝐮♕",
                 iconURL: "https://cdn.discordapp.com/attachments/1510626895627288676/1513151420835168347/123.png"
             })
 
